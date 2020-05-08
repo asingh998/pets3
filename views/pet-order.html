@@ -24,10 +24,11 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Select a color</label>
 
-            <select class="col-sm-4">
-                <option name="color" id="red" value="red"> Red</option><br>
-                <option name="color" id="blue" value="blue"> Blue</option><br>
-                <option name="color" id="black" value="black"> Black</option>
+            <select class="form-control" name="color" id="color">
+                <option>--Select a Color--</option>
+                <repeat group="{{ @colors}}" value="{{ @colorOption}}">
+                    <option>{{ @colorOption}}</option>
+                </repeat>
             </select>
         </div>
 
